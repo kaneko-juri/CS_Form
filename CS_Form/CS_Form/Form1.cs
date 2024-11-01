@@ -19,9 +19,10 @@ namespace CS_Form
             int A;
             int B = 0;
 
+
             for (A = 0; A < 10; A++) 
             {
-                TestButton testButtonA = new TestButton(B, 0, 50, 50);
+                TestButton testButtonA = new TestButton(A, B, 0, 50, 50);
                 Controls.Add(testButtonA);
                 B = B + 50;
             }

@@ -57,6 +57,12 @@
     <Compile Include="TestButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="TestLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TestTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

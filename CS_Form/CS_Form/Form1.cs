@@ -26,7 +26,6 @@ namespace CS_Form
 
             string[] strs =
        {
-
             "あ",
             "か",
             "さ",
@@ -52,7 +51,7 @@ namespace CS_Form
                 B = B + 50;
             }
 
-            string C = "テキストボックスです";
+           
 
            
 
@@ -63,7 +62,7 @@ namespace CS_Form
             //ラベルの追加
             Controls.Add(_TestLabel);
 
-            _textBox = new TestTextBox(C, 110, 400, 500, 200);
+            _textBox = new TestTextBox("テキストボックスです", 110, 400, 500, 200);
             Controls.Add(_textBox);
 
          
@@ -80,11 +79,17 @@ namespace CS_Form
             _textBox.TextUpdate(str);
         }
 
-        public void TestButtonUpdate(string C)
+        public void TestButtonUpdate(string str)
         {
-            _testButton.TextUpdate(C);
+            _testButton.TextUpdate(str);
         }
 
+        public string ButtonLabelReplacement(string str)
+        {
+           string s = _textBox.TextReplacement(str);
+
+            return s;
+        }
       
 
     }

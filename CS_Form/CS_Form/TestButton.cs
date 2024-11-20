@@ -58,6 +58,12 @@ namespace CS_Form
 
             _form1.TestButtonUpdate(Text);
 
+            string t = _form1.ButtonLabelReplacement(Text);
+
+            Text = t;
+
+            _form1.LabelTextUpdate(Text);
+
         }
 
         /// <summary>

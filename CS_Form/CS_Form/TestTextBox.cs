@@ -14,14 +14,12 @@ namespace CS_Form
         ///コンストラクタ
         ///クラスを生成したときに呼び出される
         ///</summary>
-       
         Form1 _form1;
-
 
 
         public TestTextBox(string str, int x, int y, int width, int hight)
         {
-            
+           _form1 = new Form1();
 
             //ボタン内に文字を表示させる
             Text = str;
@@ -34,6 +32,15 @@ namespace CS_Form
 
         }
 
+        public string TextReplacement(string str)
+        {
+            string temp = Text;
+
+            Text = str;
+
+            return temp;
+
+        }
 
 
         /// <summary>

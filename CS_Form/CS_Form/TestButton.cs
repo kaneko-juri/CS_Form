@@ -4,15 +4,17 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Windows.Forms;
 
 namespace CS_Form
 {
     internal class TestButton : Button
     {
-
-        
-
+        /// <summary>
+        /// ボタンをクリックした際にラベルを変更したいため、
+        /// Form1への参照を補完しておく
+        /// </summary>
         Form1 _form1;
 
 
@@ -42,14 +44,31 @@ namespace CS_Form
         }
 
         /// <summary>
-        /// ボタンをクリックした際の記述する
+        /// ボタンをクリックした際に記述をする
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="s"></param>
 
         public void OnClick(object sender, EventArgs s)
         {
+        
             _form1.LabelTextUpdate(Text);
+
+            _form1.TestTextBoxUpdate(Text);
+
+            _form1.TestButtonUpdate(Text);
+
         }
+
+        /// <summary>
+        /// ラベルの文字変更関数
+        /// </summary>
+        /// <param name="str"></param>
+        public void TextUpdate(string str)
+        {
+            Text = str;
+        }
+
+
     }
 }

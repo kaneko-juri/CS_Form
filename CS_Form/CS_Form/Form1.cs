@@ -15,9 +15,13 @@ namespace CS_Form
     {
         TestLabel _TestLabel;
 
+        TestTextBox _textBox;
+
+        TestButton _testButton;
+
         public Form1()
         {
-
+            //コンポーネントの初期化
             InitializeComponent();
 
             string[] strs =
@@ -38,6 +42,7 @@ namespace CS_Form
 
             int A;
             int B = 0;
+            
 
 
             for (A = 0; A < 10; A++) 
@@ -47,10 +52,21 @@ namespace CS_Form
                 B = B + 50;
             }
 
-            _TestLabel = new TestLabel("Label", 10, 300, 100, 500);
+            string C = "テキストボックスです";
+
+           
+
+
+            //ラベルの作成
+            _TestLabel = new TestLabel("ラベルです", 10, 300, 100, 500);
+            
+            //ラベルの追加
             Controls.Add(_TestLabel);
 
-        
+            _textBox = new TestTextBox(C, 110, 400, 500, 200);
+            Controls.Add(_textBox);
+
+         
 
         }
 
@@ -58,5 +74,18 @@ namespace CS_Form
         {
             _TestLabel.TextUpdate(str);
         }
+
+        public void TestTextBoxUpdate(string str)
+        {
+            _textBox.TextUpdate(str);
+        }
+
+        public void TestButtonUpdate(string C)
+        {
+            _testButton.TextUpdate(C);
+        }
+
+      
+
     }
 }

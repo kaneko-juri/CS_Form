@@ -52,11 +52,11 @@ namespace CS_Form
         public void OnClick(object sender, EventArgs s)
         {
         
-            _form1.LabelTextUpdate(Text);
+            //_form1.LabelTextUpdate(Text);
 
-            _form1.TestTextBoxUpdate(Text);
+           // _form1.TestTextBoxUpdate(Text);
 
-            _form1.TestButtonUpdate(Text);
+           // _form1.TestButtonUpdate(Text);
 
             string t = _form1.ButtonLabelReplacement(Text);
 

@@ -17,9 +17,9 @@ namespace CS_Form
         Form1 _form1;
 
 
-        public TestTextBox(string str, int x, int y, int width, int hight)
+        public TestTextBox(Form1 form, string str, int x, int y, int width, int hight)
         {
-           _form1 = new Form1();
+           
 
             //ボタン内に文字を表示させる
             Text = str;
